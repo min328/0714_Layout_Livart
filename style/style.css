@@ -40,29 +40,93 @@ div#contents div#topIvent {
 
 #contents div#productList {
   flex: 1;
-  margin-left: 50px;
+  margin-left: 70px;
   flex-wrap: wrap;
 }
 
-div#productList div.productItem {
+table.productItem {
   width: 220px;
+  height: 300px;
+  padding-bottom: 10px;
   margin: 0 5px;
 }
 
-div.productItem table {
+table.productItem img {
   width: 220px;
 }
-.productItem img {
-  width: inherit;
-}
 
-tr.itemTitle {
-  color: #f00;
-  display: inline-block;
+tr.itemTitle td {
+  font-size: 14px;
 }
 
 span.itemTag {
   color: rgb(172, 105, 17);
   font-size: 13px;
   font-weight: bold;
+}
+
+tr.itemPrice td {
+  text-align: center;
+}
+
+tr.itemPrice td span {
+  color: #058780;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+tr.itemPrice td::after {
+  color: #058780;
+  content: "원";
+  font-weight: bold;
+}
+
+div#modalBG {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(119, 96, 96, 0.212);
+  display: none;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+div#popUp {
+  width: 680px;
+  padding: 20px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#popUp div#popTitle {
+  font-size: 20px;
+  padding: 20px 0 10px 0;
+}
+
+#popUp div#popPrice {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+}
+
+#popUp div#popPrice::after {
+  content: "원";
+}
+
+#modalBG button {
+  color: #fff;
+  border: none;
+  margin-right: 30px;
+  margin-top: 10px;
+  float: right;
+  font-size: 40px;
+  background-color: transparent;
+  cursor: pointer;
 }
